@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VaultX.ai - Creative Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable manual dark mode toggling
+        theme: {
+          extend: {
+            colors: {
+              vault: {
+                50: '#ffffff',
+                100: '#fafafa',
+                200: '#f5f5f5',
+                300: '#d4d4d4', // The requested washed out silver
+                400: '#a3a3a3',
+                500: '#737373',
+                600: '#525252',
+                700: '#404040',
+                800: '#262626',
+                900: '#171717',
+                950: '#0a0a0a',
+              },
+              primary: {
+                50: '#f5f5f5',
+                100: '#e5e5e5',
+                200: '#d4d4d4',
+                300: '#a3a3a3',
+                400: '#737373',
+                500: '#171717', // Black as primary
+                600: '#000000',
+                700: '#404040', // Dark gray for hover
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #d4d4d4 100%);
+        color: #171717;
+        min-height: 100vh;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+      
+      /* Dark Mode Body */
+      .dark body {
+        background: linear-gradient(135deg, #171717 0%, #0a0a0a 100%);
+        color: #f5f5f5;
+      }
+
+      /* Custom Scrollbar - Light Theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f5f5f5; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4d4d4; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a3a3a3; 
+      }
+
+      /* Dark Scrollbar */
+      .dark ::-webkit-scrollbar-track {
+        background: #262626; 
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #525252; 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #737373; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
